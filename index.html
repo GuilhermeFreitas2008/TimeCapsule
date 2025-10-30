@@ -1,80 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChronoWorld - Ideias e Histórias</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Beige White Minimal Simple Modern Classic Fitness And Spa Sand Logo.png">
+    <title>TimeCapsule</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+    
 </head>
-<body>
+<body class="index-page">
 
-  <!-- NAVBAR (importada via JS) -->
-  <div id="navbar-placeholder"></div>
+    <header>
+        <div class="logo">
+            <img src="images/Beige White Minimal Simple Modern Classic Fitness And Spa Sand Logo.png" alt="Logo TimeCapsule">
+        </div>
+         <nav>
+            <a href="index.html">Início</a>
+            <a href="linguas.html">Temas</a>
+            <a href="about.html">Sobre</a>
+        </nav>
+       
+    </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Explora o passado, vive o presente, imagina o futuro.</h2>
-      <p>Um espaço onde tecnologia, arte e história se encontram.</p>
-      <a href="temas/tecnologia.html" class="btn">Explorar Conteúdos</a>
-    </div>
-  </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>
+                    Explora o passado, vive o presente, imagina o<br>
+                    <span class="highlight"> futuro.</span>
+                </h1>
+                <p>Um espaço onde tecnologia, arte e história se encontram.</p>
+                <a href="linguas.html" class="button">Começar agora →</a>
+            </div>
+            <div class="hero-image">
+                <script src="assets/js/hero-image.js"></script>
+                <img src="images/c9eea61b63d1aa7d30671c044fe5e0ce.jpg" alt="Elementos decorativos coloridos">
+            </div>
+        </section>
 
-  <!-- SOBRE -->
-  <section class="about">
-    <div class="container">
-      <h2>Sobre o Projeto</h2>
-      <p>O ChronoWorld é um espaço interativo que junta vários temas — desde o futuro da tecnologia à evolução da música e dos videojogos. O objetivo é inspirar curiosidade e mostrar como o mundo evolui com o tempo.</p>
-    </div>
-  </section>
+        <section class="como-funciona">
+            <h2>Como funciona</h2>
+            <p class="section-description">Uma experiência de aprendizado inspirada no Duolingo, com recursos visuais para tornar o aprendizado de línguas gestuais simples e eficaz.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>Escolha sua língua</h3>
+                    <p>Selecione entre Língua Gestual Portuguesa, LIBRAS ou ASL para começar sua jornada.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>Aprenda com lições visuais</h3>
+                    <p>Veja GIFs e demonstrações claras para cada sinal, com explicações detalhadas.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>Pratique e evolua</h3>
+                    <p>Acompanhe seu progresso enquanto domina diferentes níveis de fluência em língua gestual.</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- ARTIGOS -->
-  <section class="articles">
-    <div class="container">
-      <h2>Últimos Artigos</h2>
-      <div class="article-grid">
-        <article class="card">
-          <img src="images/tech.jpg" alt="Tecnologia">
-          <h3>O Futuro da Inteligência Artificial</h3>
-          <p>Descobre como a IA está a transformar o nosso dia a dia e o que podemos esperar nos próximos anos.</p>
-          <a href="temas/tecnologia.html" class="read-more">Ler mais</a>
-        </article>
+        <section class="linguas">
+            <h2>Línguas disponíveis</h2>
+            <p class="section-description">Comece sua jornada com uma destas línguas gestuais e surpreenda alguém especial.</p>
+            
+            <div class="languages-grid">
+                <a href="modulos/modulos-pt.html" class="language-card">
+                    <span class="language-code">PT</span>
+                    <span class="language-name">Língua Gestual Portuguesa</span>
+                    <span class=>
+           </a>
+                <a href="modulos/modulos-br.html" class="language-card">
+                    <span class="language-code">BR</span>
+                    <span class="language-name">LIBRAS</span>
+                    <span class=>sn          </a>
+                <a href="modulos/modulos-usa.html" class="language-card">
+                    <span class="language-code">US</span>
+                    <span class="language-name">American Sign Language</span>
+                    <span class="arrow">→</span>
+   </a>
+            </div>
 
-        <article class="card">
-          <img src="images/games.jpg" alt="Jogos">
-          <h3>A História dos Videojogos</h3>
-          <p>Dos 8-bits ao metaverso — uma viagem pela evolução da diversão digital.</p>
-          <a href="temas/jogos.html" class="read-more">Ler mais</a>
-        </article>
+            <a href="linguas.html" class="ver-todas">Ver todos os temas→</a>
+        </section>
+    </main>
 
-        <article class="card">
-          <img src="images/music.jpg" alt="Música">
-          <h3>A Revolução da Música Digital</h3>
-          <p>Como o streaming mudou a forma como vivemos e descobrimos música.</p>
-          <a href="temas/musica.html" class="read-more">Ler mais</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container">
-      <h2>Queres partilhar as tuas ideias?</h2>
-      <p>Junta-te à nossa comunidade e ajuda-nos a construir o futuro das histórias.</p>
-      <a href="contact.html" class="btn">Envia o teu artigo</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 ChronoWorld. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>TimeCapsule
+        
+                </span>
+                <p>Aprendendo línguas gestuais juntos</p>
+            </div>
+            <p class="footer-love">Feito com ♥️ para o amor da sua vida</p>
+        </div>
+        <p class="copyright">© 2025 TimeCapsule
+. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
+

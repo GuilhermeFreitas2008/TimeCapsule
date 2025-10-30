@@ -1,51 +1,385 @@
+:root {
+    --background-color: #06141B;      /* Darkest - main background */
+    --card-background: #11212D;       /* Second darkest - card backgrounds */
+    --background-light: #253745;      /* Third darkest - secondary backgrounds */
+    --accent-dark: #4A5C6A;          /* Medium - darker accents */
+    --accent-color: #9BA8AB;         /* Light - primary accent */
+    --text-light: #CCD0CF;           /* Lightest - main text */
+    --text-color: #CCD0CF;           /* Same as text-light for consistency */
+    --primary-color: #06141B;        /* Same as background for consistency */
+    --secondary-color: #11212D;      /* Same as card-background */
+    --tertiary-color: #253745;       /* Same as background-light */
+    --accent-light: #90CAF9;         /* Lighter blue for hover states */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 2rem; /* Ajuda com links de ancoragem */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.index-page::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 81%;
+    background-image: radial-gradient( #4A5C6A 0.9px, transparent 0.9px);
+    background-size: 20px 20px;
+    opacity: 0.15;
+    pointer-events: none;
+    margin-top: 90px;
+}
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    background-color: var(--background-color);
+    overflow-y: scroll;
+    scroll-padding-top: 80px; /* Altura da navbar */
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 7%;
+    background-color: var(--background-light);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.logo img {
+    width: 150px;
+    height: 60px;
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
 .hero {
-  /*background: url('../images/hero-bg.jpg') center/cover no-repeat;*/
-  color: #fff;
-  text-align: center;
-  padding: 8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10%;
+    gap: 4rem;
 }
 
-.about, .articles, .cta {
-  padding: 4rem 0;
-  text-align: center;
+.hero-content {
+    z-index: 1000;
+    flex: 1;
 }
 
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+.hero h1 {
+    z-index: 1000;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
 }
 
-.card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+.hero .highlight {
+    z-index: 1000;
+    color: var(--accent-color);
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.hero p {
+    z-index: 1000;
+    font-size: 1.1rem;
+    color: var(--accent-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
 }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.hero-image {
+    flex: 1;
+    z-index: 1000;
 }
 
-.read-more {
-  display: inline-block;
-  margin: 1rem;
-  color: #ffae00;
-  text-decoration: none;
+.hero-image img {
+    z-index: 5000;
+    width: 77%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    margin-left: 77px;
+}
+.hero-image:hover {
+    z-index: 1000;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
-.read-more:hover {
-  text-decoration: underline;
+.button {
+    z-index: 1000;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.2s;
 }
 
-.cta {
-  background: #111;
-  color: #fff;
+.button:hover {
+    z-index: 1000;
+    transform: translateY(-2px);
+    background-color: var(--accent-light);
+    color: var(--primary-color);
+}
+
+/* Como Funciona Section */
+.como-funciona {
+    z-index: 1000;
+    padding: 4rem 10%;
+    text-align: center;
+    position: relative;
+}
+
+.como-funciona h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.section-description {
+    color: var(--accent-light);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.step-number {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.step h3 {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.step p {
+    color: var(--accent-light);
+}
+
+/* Línguas Section */
+.linguas {
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.language-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--card-background);
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-light);
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.language-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+.language-code {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.language-name {
+    flex: 1;
+    text-align: left;
+}
+
+.arrow {
+    color: var(--accent-color);
+}
+
+.ver-todas {
+    color: var(--accent-color);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background: var(--background-light);
+    padding: 4rem 10% 2rem;
+    border-top: 1px solid var(--accent-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo span {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.footer-logo p {
+    color: var(--accent-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.footer-love {
+    color: var(--accent-color);
+}
+
+.copyright {
+    text-align: center;
+    color: var(--accent-light);
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero p {
+        margin: 0 auto 2rem;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .languages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+.progress-fill {
+    background-color: var(--accent-color);
+}
+
+.nav-button {
+    color: var(--accent-color);
+}
+
+.badge {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+.start-button {
+    color: var(--accent-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Suavização para links e botões */
+a, button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Suavização para hover states */
+a:hover, button:hover {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Suavização para elementos que mudam de tamanho */
+.hero-image, .step, .language-card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Suavização para inputs e focus states */
+input, textarea, select {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-dark);
 }

@@ -6,8 +6,9 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #222;
-  background: #f9f9f9;
+  /* Dark mode palette (user provided): #021024, #052659, #5483B3, #7DA0CA, #C1E8FF */
+  color: #C1E8FF; /* light text */
+  background: #021024; /* darkest background */
   line-height: 1.6;
 }
 
@@ -18,20 +19,107 @@ body {
 }
 
 h2 {
-  color: #ffae00;
+  color: #7DA0CA;
 }
 
 .btn {
   display: inline-block;
-  background: #ffae00;
-  color: #111;
+  background: #5483B3;
+  color: #021024;
   padding: 0.7rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(5,38,89,0.18);
 }
 
 .btn:hover {
-  background: #fff;
-  color: #111;
+  background: #C1E8FF;
+  color: #021024;
+  transform: translateY(-2px);
+}
+
+/* CTA (call-to-action) - dark palette */
+.cta {
+  background:  #0f1d2c;
+  color: #C1E8FF;
+  padding: 3.5rem 0;
+}
+
+.cta .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta h2 {
+  color: #C1E8FF;
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.cta p {
+  color: rgba(193,232,255,0.9);
+  margin-bottom: 0.75rem;
+}
+
+.cta .btn {
+  background: #7DA0CA; /* lighter accent for CTA button */
+  color: #021024;
+  padding: 0.9rem 1.6rem;
+  box-shadow: 0 8px 28px rgba(5,38,89,0.18);
+}
+
+.cta .btn:hover {
+  background: #C1E8FF;
+  color: #021024;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 800px) {
+  .cta .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta .btn { margin-top: 1rem; }
+}
+
+/* Footer styles (dark palette) */
+.footer {
+  background: #021024; /* match page bg for a seamless look */
+  color: #C1E8FF;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(84,131,179,0.08); /* subtle separation */
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  font-size: 0.95rem;
+  color: #C1E8FF;
+  opacity: 0.9;
+}
+
+.footer a {
+  color: #7DA0CA;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #C1E8FF;
+}
+
+@media (max-width: 600px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
