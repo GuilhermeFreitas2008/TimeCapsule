@@ -1,6 +1,74 @@
+:root {
+    --background-color: #06141B;      /* Darkest - main background */
+    --card-background: #11212D;       /* Second darkest - card backgrounds */
+    --background-light: #253745;      /* Third darkest - secondary backgrounds */
+    --accent-dark: #4A5C6A;          /* Medium - darker accents */
+    --accent-color: #9BA8AB;         /* Light - primary accent */
+    --text-light: #CCD0CF;           /* Lightest - main text */
+    --text-color: #CCD0CF;           /* Same as text-light for consistency */
+    --primary-color: #06141B;        /* Same as background for consistency */
+    --secondary-color: #11212D;      /* Same as card-background */
+    --tertiary-color: #253745;       /* Same as background-light */
+    --accent-light: #90CAF9;         /* Lighter blue for hover states */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 2rem; /* Ajuda com links de ancoragem */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about-page::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 81%;
+    background-image: radial-gradient( #4A5C6A 0.9px, transparent 0.9px);
+    background-size: 20px 20px;
+    opacity: 0.15;
+    pointer-events: none;
+    margin-top: 90px;
+}
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    background-color: var(--background-color);
+    overflow-y: scroll;
+    scroll-padding-top: 80px; /* Altura da navbar */
+    scroll-behavior: smooth;
+}
+/* Header Styles */
+header {
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 7%;
+    background-color: var(--background-light);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.logo img {
+    width: 76px;
+    height: 60px;
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
 /* --- HERO --- */
 .about-hero {
-  background: linear-gradient(135deg, var(--background-color), var(--background-light));
+ 
   color: var(--text-light);
   text-align: center;
   padding: 8rem 2rem;
@@ -10,15 +78,7 @@
   border-bottom: 1px solid var(--accent-color);
 }
 
-.about-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(var(--accent-dark) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.15;
-  pointer-events: none;
-}
+
 
 .about-hero h1 {
   font-size: 3rem;
@@ -36,7 +96,7 @@
 
 /* --- MISSÃO --- */
 .mission {
-  background: var(--card-background);
+  
   color: var(--text-light);
   padding: 5rem 10%;
   text-align: center;

@@ -52,7 +52,7 @@ header {
 }
 
 .logo img {
-    width: 150px;
+    width: 76px;
     height: 60px;
 }
 
@@ -182,21 +182,29 @@ nav a:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.step-number {
-    color: var(--accent-color);
-    font-weight: 700;
-    font-size: 1.2rem;
+/* substitui .step-number por este novo estilo */
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; /* espaçamento entre o dot e o título */
     margin-bottom: 1rem;
-    display: block;
+}
+
+.step-dot {
+    font-size: 2rem;
+    color: #4A5C6A; /* cor do dot */
+    line-height: 1;
 }
 
 .step h3 {
-    margin-bottom: 1rem;
+    margin: 0; /* remove o margin-bottom original pra alinhar certinho */
     color: var(--text-light);
+    font-weight: 600;
 }
 
 .step p {
     color: var(--accent-light);
+    margin-left: 2.6rem; /* opcional: alinha o texto com o h3 */
 }
 
 /* Línguas Section */
@@ -207,7 +215,7 @@ nav a:hover {
 
 .languages-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin: 3rem 0;
 }
