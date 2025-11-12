@@ -32,6 +32,8 @@
     margin-top: 90px;
 }
 
+
+
 body {
     background-color: var(--background-color);
     color: var(--text-light);
@@ -66,7 +68,7 @@ header {
 }
 
 .logo img {
-    width: 150px;
+    width: 76px;
     height: 60px;
 }
 
